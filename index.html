@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Referral</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .input-container {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 17%;
+      margin-bottom: 10px;
+    }
+
+    .input-label,
+    .input-field {
+      display: block;
+    }
+
+    .input-field {
+      margin-top: 5px;
+    }
+
+    .submit-button-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    .input-field input[type="text"] {
+      border-radius: 20px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+    }
+    .multiple-choice-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    h1 {
+    color: maroon;
+  }
+    h2 {
+    color: red;
+    font-style: italic;
+  }
+  h3 {
+    color: grey; 
+    font-style: italic;
+  }
+    .submit-button-container form input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: teal;
+    color: lightcoral;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  </style>
+  <script>
+    function redirectToThankYou() {
+      window.location.href = "submit.html";
+    }
+  </script>
+</head>
+<body>
+  <h1>Create a New Referral</h1>
+  <h2>Demographics</h2>
+  <div class="input-container">
+    <div class="input-label">First Name:</div>
+    <div class="input-field">
+      <input id="First Name" type="text" placeholder="First Name">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Last Name:</div>
+    <div class="input-field">
+      <input id="Last Name" type="text" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">SSN (last 4):</div>
+    <div class="input-field">
+      <input id="SSN" type="text" placeholder="Number">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Preferred Language:</div>
+    <div class="input-field">
+      <input id="LAN" type="text" placeholder="ex: English">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Marital Status:</div>
+    <div class="input-field">
+      <input id="STATUSMA" type="text" placeholder="ex: Married, Divorced">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Gender:</div>
+    <div class="input-field">
+      <input id="Gender" type="text" placeholder="Enter Gender">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Email:</div>
+    <div class="input-field">
+      <input id="EMAIL" type="text" placeholder="Enter Email">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Date of Birth:</div>
+    <div class="input-field">
+      <input id="DOB" type="text" placeholder="Enter DOB">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Age:</div>
+    <div class="input-field">
+      <input id="AGE" type="text" placeholder="ex:13,26,39,52,65">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Phone Type:</div>
+    <div class="input-field">
+      <input id="DOB" type="text" placeholder="ex:Smartphone,flip phone">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Height and Weight:</div>
+    <div class="input-field">
+      <input id="HW" type="text" placeholder="Enter Height and Weight">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Service Requested By</div>
+    <div class="input-field">
+      <input id="SRB" type="text" placeholder="Enter Name">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Phone Number:</div>
+    <div class="input-field">
+      <input id="PN" type="text" placeholder="ex:+1 123-456-7890">
+    </div>
+  </div>
+  <h3>Address</h3>
+  <div class="input-container">
+    <div class="input-label">Address 1:</div>
+    <div class="input-field">
+      <input id="AD1" type="text" placeholder="Enter Address 1">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Address 2</div>
+    <div class="input-field">
+      <input id="AD2" type="text" placeholder="Enter Address 2">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Zip Code</div>
+    <div class="input-field">
+      <input id="ZipCode" type="text" placeholder="Enter Zip Code">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">State</div>
+    <div class="input-field">
+      <input id="STATE" type="text" placeholder="Enter State">
+    </div>
+  </div> 
+  <div class="input-container">
+    <div class="input-label">City</div>
+    <div class="input-field">
+      <input id="City" type="text" placeholder="ex:Some City">
+    </div>
+  </div> 
+  <div class="input-container">
+    <div class="input-label">Office Address</div>
+    <div class="input-field">
+      <input id="AdOf" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <h3>Emergency Contact Info</h3>
+  <div class="input-container">
+    <div class="input-label">First Name:</div>
+    <div class="input-field">
+      <input id="First 2Name" type="text" placeholder="First Name">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Last Name:</div>
+    <div class="input-field">
+      <input id="Last 2Name" type="text" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Email:</div>
+    <div class="input-field">
+      <input id="EM2AIL" type="text" placeholder="Enter Email">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Phone Type:</div>
+    <div class="input-field">
+      <input id="DO2B" type="text" placeholder="ex:Smartphone,flip phone">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Phone Number:</div>
+    <div class="input-field">
+      <input id="2PN" type="text" placeholder="ex:+1 123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Address 1:</div>
+    <div class="input-field">
+      <input id="AD21" type="text" placeholder="Enter Address 1">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Address 2</div>
+    <div class="input-field">
+      <input id="AD22" type="text" placeholder="Enter Address 2">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Zip Code</div>
+    <div class="input-field">
+      <input id="ZipC2ode" type="text" placeholder="Enter Zip Code">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">State</div>
+    <div class="input-field">
+      <input id="STA2TE" type="text" placeholder="Enter State">
+    </div>
+  </div> 
+  <div class="input-container">
+    <div class="input-label">City</div>
+    <div class="input-field">
+      <input id="Ci2ty" type="text" placeholder="ex:Some City">
+    </div>
+  </div> 
+  <h3>Living Situation</h3>
+  <div class="input-container">
+    <div class="input-label">Living Situation </div>
+    <div class="input-field">
+      <input id="LIVING" type="text" placeholder="ex:Smoking,Dogs">
+    </div>
+  </div>
+  <h2>Clinical Details</h2>
+  <div class="input-container">
+    <div class="input-label">Referral Date</div>
+    <div class="input-field">
+      <input id="Referad" type="text" placeholder="Enter Date">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Start of Care</div>
+    <div class="input-field">
+      <input id="CareStart" type="text" placeholder="Enter Date">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Service requested</div>
+    <div class="input-field">
+      <input id="SRSR" type="text" placeholder="RN/LC">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Physician Look Up</div>
+    <div class="input-field">
+      <input id="PLU" type="text" placeholder="Enter Name">
+    </div>
+  </div>
+  <h3>Current Medical History</h3>
+  <div class="input-container">
+    <div class="input-label">Admit Date</div>
+    <div class="input-field">
+      <input id="AD" type="text" placeholder="Enter Date">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Discharge Date</div>
+    <div class="input-field">
+      <input id="DCD" type="text" placeholder="Enter Date">
+    </div>
+  </div>
+<div class = "multiple-choice-container"></div> 
+  <form>
+    <p>Limitations</p>
+    
+    <label>
+      <input type="radio" name="answer" value="a"> a) Paralysis
+    </label><br>
+    
+    <label>
+      <input type="radio" name="answer" value="b"> b) Hearing Loss
+    </label><br>
+    
+    <label>
+      <input type="radio" name="answer" value="c"> c) Speech
+    </label><br>
+    
+    <label>
+      <input type="radio" name="answer" value="d"> d) Vision
+    </label><br>
+  </form>
+</div>
+  <div class="input-container">
+    <div class="input-label">Diagnosis</div>
+    <div class="input-field">
+      <input id="Diagnosis" type="text" placeholder="ex:Cancer, Diabetes">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Current medical history</div>
+    <div class="input-field">
+      <input id="CMH" type="text" placeholder="Enter History">
+    </div>
+  </div>
+  <h2>Insurance Details</h2>
+  <h3>Primary Details</h3>
+  <div class="input-container">
+    <div class="input-label">Payor Type</div>
+    <div class="input-field">
+      <input id="PT" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Plan Name</div>
+    <div class="input-field">
+      <input id="PLANNAME" type="text" placeholder="Type Here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Policy Name</div>
+    <div class="input-field">
+      <input id="POLICYNAME" type="text" placeholder="ex:Private Pay">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Payor Number</div>
+    <div class="input-field">
+      <input id="PAYNUMB" type="text" placeholder="ex:123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Insuance Number</div>
+    <div class="input-field">
+      <input id="InNumber" type="text" placeholder="ex:123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Group Number</div>
+    <div class="input-field">
+      <input id="grppnumberpokemon" type="text" placeholder="ex:123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Medicare Number</div>
+    <div class="input-field">
+      <input id="Mediecare" type="text" placeholder="ex:123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Medicaid Number</div>
+    <div class="input-field">
+      <input id="Medicaid" type="text" placeholder="ex:123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Insuance Card Coverage Date</div>
+    <div class="input-field">
+      <input id="InNumber" type="text" placeholder="mm/dd/yy">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Policy Name</div>
+    <div class="input-field">
+      <input id="POLICYNAME" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Date of Birth:</div>
+    <div class="input-field">
+      <input id="DO3B" type="text" placeholder="Enter DOB">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Relationship</div>
+    <div class="input-field">
+      <input id="RE" type="text" placeholder="Wife/Husband/BF/GF">
+    </div>
+  </div>
+  <h2>Refferal Source</h2>
+
+  <div class="submit-button-container">
+    <form action="javascript:void(0);" onsubmit="redirectToThankYou()">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
+  <form>
+    <p>Who contacted us for this refferal</p>
+    
+    <label>
+      <input type="radio" name="answer" value="a"> a) Individual
+    </label><br>
+    
+    <label>
+      <input type="radio" name="answer" value="b"> b) Organization
+    </label><br>
+  </form>
+  <div class="input-container">
+    <div class="input-label">Refferal External ID</div>
+    <div class="input-field">
+      <input id="REDedi23dnbiwjk" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Refferal Source</div>
+    <div class="input-field">
+      <input id="REFERRALSOURCE" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Refferal Contact Name</div>
+    <div class="input-field">
+      <input id="NameContactRefferal" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Refferal External ID</div>
+    <div class="input-field">
+      <input id="REDedi23dnbiwjk" type="text" placeholder="Type here">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Phone Number:</div>
+    <div class="input-field">
+      <input id="23PN" type="text" placeholder="ex:+1 123-456-7890">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Email ID:</div>
+    <div class="input-field">
+      <input id="EDU" type="text" placeholder="ex:alan@gmail.com">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Date Recieved</div>
+    <div class="input-field">
+      <input id="dra" type="text" placeholder="ex:5/5/2023">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-label">Respond By Date</div>
+    <div class="input-field">
+      <input id="dragon" type="text" placeholder="ex:9/4/2023">
+    </div>
+  </div>
